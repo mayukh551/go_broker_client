@@ -50,7 +50,7 @@ func getIP(b *Broker) string {
 
 func (b *Broker) Connect() error {
 
-	conn, err := net.Dial("tcp", "ec2-15-134-204-186.ap-southeast-2.compute.amazonaws.com")
+	conn, err := net.Dial("tcp", getIP(b))
 
 	if err != nil {
 		println("Broker Connect Error", err)
